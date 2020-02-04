@@ -1,0 +1,19 @@
+---
+# Mockfog Application Configuration
+
+application_config:
+  - name: genConf1
+    application_definition: generator
+    nodes: generator
+    vars:
+      env: null
+
+  - name: appConfLayer1
+    application_definition: application
+    nodes: application
+    vars:
+      volumes:
+        path: /mockfog_application/templates/config_layer1.yaml
+        container: /app/config.yaml
+      env:
+        - {key: remote, value: TEST}

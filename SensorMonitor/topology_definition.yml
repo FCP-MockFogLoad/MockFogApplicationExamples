@@ -1,0 +1,15 @@
+Nodes:
+  - name: generator
+    role: generator
+    image: ami-05da26ff253f6c5df
+    flavor: t3.nano
+
+  - name: application
+    role: application
+    image: ami-05da26ff253f6c5df
+    flavor: t3.micro
+
+
+Edges:
+  - u_of_edge: generator
+    v_of_edge: application

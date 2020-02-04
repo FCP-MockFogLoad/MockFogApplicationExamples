@@ -1,0 +1,16 @@
+testName: HeartRate
+stages:
+  - id: 1
+    time: 1
+    node:
+      - id: generator
+        generators:
+          - id: generator
+            kind: HeartRate
+            events_per_second: 30
+            endpoint: application
+            endpoint_port: 30444
+            active: true
+            format_string: '{"source":"peter","time":${timestamp},"value":${heartRate},"type":"heartRate"}'
+            protocol: HTTP
+            seed: 30

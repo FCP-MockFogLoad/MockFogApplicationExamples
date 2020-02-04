@@ -1,0 +1,8 @@
+sources:
+  - type: http
+    port: 4567
+measurementTypes:
+  - name: "heartRate"
+    lowerThreshold: 1
+    upperThreshold: 2
+sinks: []
